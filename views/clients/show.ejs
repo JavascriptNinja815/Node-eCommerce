@@ -1,0 +1,104 @@
+ <% include ../partials/header %>
+ 
+
+  <!-- Portfolio Single Item -->
+  <section class="container g-py-100">
+    <!-- Cube Portfolio Blocks - Content -->
+    <div class="cbp g-mb-50" data-controls="#filterControls1" data-animation="quicksand" data-x-gap="30" data-y-gap="30" data-media-queries='[{"width": 1500, "cols": 3}, {"width": 1100, "cols": 3}, {"width": 800, "cols": 3}, {"width": 480, "cols": 2}, {"width": 300, "cols": 1}]'>
+      <!-- Cube Portfolio Blocks - Item -->
+      <div class="cbp-item graphic">
+        <div class="u-block-hover g-parent">
+          <img class="img-fluid g-transform-scale-1_1--parent-hover g-transition-0_5 g-transition--ease-in-out" src="<%= product.image.url %>" alt="Image description">
+        </div>
+      </div>
+      <!-- End Cube Portfolio Blocks - Item -->
+    </div>
+    <!-- End Cube Portfolio Blocks - Content -->
+
+    <div class="row g-mb-70">
+      <div class="col-md-8 g-mb-30">
+        <div class="mb-5">
+          <h2 class="g-color-black mb-1"><%= product.title %></h2>
+          <span class="d-block lead mb-4">$<%= product.price %></span>
+          <p><%= product.description %></p>
+        </div>
+        <a class="btn btn-md u-btn-primary g-font-size-default g-rounded-25 g-px-30 g-py-12" href="/add-to-cart/<%= product._id %>">Add to Cart</a>
+      </div>
+
+      <div class="col-md-4 g-mb-30">
+        <!-- Client -->
+        <div class="mb-5">
+          <h3 class="h5 g-color-black mb-3">Category</h3>
+          <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#!"><strong><%= product.category %></strong>
+          </a>
+        </div>
+        <!-- End Client -->
+
+
+        <!-- Tags -->
+        <div class="g-mb-30">
+          <h3 class="h5 g-color-black mb-3">Price</h3>
+          <ul class="u-list-inline mb-0">
+            <li class="list-inline-item g-mb-10">
+              <strong>$<%= product.price %></strong>
+            </li>
+          </ul>
+        </div>
+        <!-- End Tags -->
+
+                <!-- Tags -->
+                <div class="g-mb-30">
+                  <h3 class="h5 g-color-black mb-3">Product Weight</h3>
+                  <ul class="u-list-inline mb-0">
+                    <li class="list-inline-item g-mb-10">
+                      <strong>Weight:</strong> <%= product.weight %> Pounds
+                    </li>
+                  </ul>
+                </div>
+                <!-- End Tags -->
+                <!-- Tags -->
+                <div class="g-mb-30">
+                  <h3 class="h5 g-color-black mb-3">Product Dimensions</h3>
+                  <ul class="u-list-inline mb-0">
+                    <li class="list-inline-item g-mb-10">
+                      <strong>Length:</strong> <%= product.length %> inches <br>
+                      <strong>Height:</strong> <%= product.height %> inches <br> 
+                      <strong>Width:</strong> <%= product.width %> inches
+                    </li>
+                  </ul>
+                </div>
+                <!-- End Tags -->
+      </div>
+    </div>
+
+    <!-- Pagination 
+    <nav class="text-center" aria-label="Page Navigation">
+      <ul class="list-inline mb-0">
+        <li class="list-inline-item float-sm-left">
+          <a class="u-pagination-v1__item u-pagination-v1-4 g-brd-gray-light-v3 g-brd-primary--hover g-rounded-50 g-pa-7-16" href="#!" aria-label="Previous">
+            <span aria-hidden="true">
+              <i class="fa fa-angle-left"></i>
+              Previous
+            </span>
+          </a>
+        </li>
+        <li class="list-inline-item mr-0">
+          <a class="u-pagination-v1__item g-color-gray-dark-v4 g-font-size-20 g-py-2 g-px-10" href="#!" data-toggle="tooltip" data-placement="top" title="View All">
+            <i class="icon-grid"></i>
+          </a>
+        </li>
+        <li class="list-inline-item float-sm-right">
+          <a class="u-pagination-v1__item u-pagination-v1-4 g-brd-gray-light-v3 g-brd-primary--hover g-rounded-50 g-pa-7-16" href="#!" aria-label="Next">
+            <span aria-hidden="true">
+              Next
+              <i class="fa fa-angle-right"></i>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <! End Pagination -->
+  </section>
+  <!-- End Portfolio Single Item -->
+
+  <% include ../partials/footer %>

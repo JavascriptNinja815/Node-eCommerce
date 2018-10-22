@@ -1,0 +1,334 @@
+<% include ../partials/headerAdmin %>
+
+<main>
+    <!-- Header -->
+    <header id="js-header" class="u-header u-header--sticky-top">
+      <div class="u-header__section u-header__section--admin-light g-min-height-65">
+        <nav class="navbar no-gutters g-pa-0">
+              <!-- Logo-->
+              <div class="g-pa-15">
+              <a href="/home" class="navbar-brand">
+                <img src="../../assets/img/logo/logo-tidepool.png" class="logo--main" alt="TidePool Aquatics";>
+              </a>
+            </div>
+
+
+
+          <!-- Top Activity Toggler -->
+          <a id="activityInvoker" class="text-uppercase u-header-icon-v1 g-pos-rel g-width-40 g-height-40 rounded-circle g-font-size-20" href="#!" aria-controls="activityMenu" aria-haspopup="true" aria-expanded="false" data-dropdown-event="click" data-dropdown-target="#activityMenu"
+          data-dropdown-type="css-animation" data-dropdown-animation-in="fadeInRight" data-dropdown-animation-out="fadeOutRight" data-dropdown-duration="300">
+            <i class="hs-admin-align-right g-absolute-centered"></i>
+          </a>
+          <!-- End Top Activity Toggler -->
+        </nav>
+
+
+
+      </div>
+    </header>
+    <!-- End Header -->
+
+
+    <section class="container-fluid px-0 g-pt-65">
+      <div class="row no-gutters g-pos-rel g-overflow-x-hidden">
+        <!-- Sidebar Nav -->
+        <!-- Sidebar Nav -->
+            <div id="sideNav" class="col-auto u-sidebar-navigation-v1 u-sidebar-navigation--light">
+              <ul id="sideNavMenu" class="u-sidebar-navigation-v1-menu u-side-nav--top-level-menu g-min-height-100vh mb-0">
+                <!-- Dashboards -->
+                <li class="u-sidebar-navigation-v1-menu-item u-side-nav--has-sub-menu u-side-nav--top-level-menu-item u-side-nav-opened has-active">
+                  <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12" href="#!" data-hssm-target="#subMenu1">
+                    <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
+            <i class="hs-admin-server"></i>
+          </span>
+                    <span class="media-body align-self-center">Dashboard</span>
+                    <span class="d-flex align-self-center u-side-nav--control-icon">
+            <i class="hs-admin-angle-right"></i>
+          </span>
+                    <span class="u-side-nav--has-sub-menu__indicator"></span>
+                  </a>
+      
+                  <!-- Dashboards: Submenu-1 -->
+                  <ul id="subMenu1" class="u-sidebar-navigation-v1-menu u-side-nav--second-level-menu mb-0" style="display: block;">
+                    <!-- Dashboards v1 -->
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--second-level-menu-item">
+                      <a class="media u-side-nav--second-level-menu-link g-px-15 g-py-12" href="/admin">
+                        <span class="d-flex align-self-center g-mr-15 g-mt-minus-1">
+                <i class="hs-admin-infinite"></i>
+              </span>
+                        <span class="media-body align-self-center">Admin Home</span>
+                      </a>
+                    </li>
+                    <!-- End Dashboards v1 -->
+      
+                    <!-- Dashboards v2 -->
+                    <li class="u-sidebar-navigation-v1-menu-item u-side-nav--second-level-menu-item">
+                      <a class="media u-side-nav--second-level-menu-link g-px-15 g-py-12" href="/new">
+                        <span class="d-flex align-self-center g-mr-15 g-mt-minus-1">
+                <i class="hs-admin-blackboard"></i>
+              </span>
+                        <span class="media-body align-self-center">Add Product</span>
+                      </a>
+                    </li>
+                    <!-- End Dashboards v2 -->
+      
+                    <!-- Dashboards v3 -->
+                    
+                  </ul>
+                  <!-- End Dashboards: Submenu-1 -->
+                </li>
+                <!-- End Dashboards -->
+              </ul>
+            </div>
+            <!-- End Sidebar Nav -->
+
+
+        <div class="col g-ml-45 g-ml-0--lg g-pb-65--md">
+          <div class="g-pa-20">
+            <div class="row">
+              <div class="col-md-3 g-mb-30 g-mb-0--md">
+                <div class="h-100 g-brd-around g-brd-gray-light-v7 g-rounded-4 g-pa-15 g-pa-20--md">
+                  <!-- User Information -->
+                  <section class="text-center g-mb-30 g-mb-50--md">
+
+                    <h3 class="g-font-weight-300 g-font-size-20 g-color-black mb-0">Add New Product</h3>
+                  </section>
+                  <!-- User Information -->
+
+                  <!-- Profile Sidebar -->
+                  <section>
+                    <ul class="list-unstyled mb-0">
+                      <li class="g-brd-top g-brd-gray-light-v7 mb-0">
+                        <a class="d-flex align-items-center u-link-v5 g-parent g-py-15 active" href="../app-views/app-profile.html">
+                          <span class="g-font-size-18 g-color-gray-light-v6 g-color-lightred-v3--parent-hover g-color-lightred-v3--parent-active g-mr-15">
+						<i class="hs-admin-user"></i>
+					</span>
+                          <span class="g-color-gray-dark-v6 g-color-lightred-v3--parent-hover g-color-lightred-v3--parent-active">Product Information</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </section>
+                  <!-- End Profile Sidebar -->
+                </div>
+
+              </div>
+
+              <div class="col-md-9">
+                <div class="h-100 g-brd-around g-brd-gray-light-v7 g-rounded-4 g-pa-15 g-pa-20--md">
+                  <form action="/new" method="POST" enctype="multipart/form-data">
+                    <header>
+                      <h2 class="text-uppercase g-font-size-12 g-font-size-default--md g-color-black mb-0">New Product Information</h2>
+                    </header>
+
+                    <hr class="d-flex g-brd-gray-light-v7 g-my-15 g-my-30--md">
+
+                    <div class="row g-mb-20">
+                      <div class="col-md-3 align-self-center g-mb-5 g-mb-0--md">
+                        <label class="mb-0" for="#productTitle">Item Name</label>
+                      </div>
+
+                      <div class="col-md-9 align-self-center">
+                        <div class="form-group g-pos-rel mb-0">
+                          <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
+                          <i class="hs-admin-check g-absolute-centered g-font-size-default g-color-lightblue-v3"></i>
+                        </span>
+                          <input id="productTitle" name="item" class="form-control form-control-md g-brd-gray-light-v7 g-brd-lightblue-v3--focus g-brd-lightred-v2--error g-rounded-4 g-px-20 g-py-12" type="text">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row g-mb-20">
+                      <div class="col-md-3 align-self-center g-mb-5 g-mb-0--md">
+                        <label class="mb-0" for="#productPrice">Product Price</label>
+                      </div>
+
+                      <div class="col-md-9 align-self-center">
+                        <div class="form-group g-pos-rel mb-0">
+                          <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
+                          <i class="hs-admin-check g-absolute-centered g-font-size-default g-color-lightblue-v3"></i>
+                        </span>
+                          <input id="productPrice" name="price" class="form-control form-control-md g-brd-gray-light-v7 g-brd-lightblue-v3--focus g-brd-lightred-v2--error g-rounded-4 g-px-20 g-py-12" type="text" value="" required="required" data-msg="This field is mandatory"
+                          data-error-class="u-has-error-v3" data-success-class="has-success" aria-required="true">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row g-mb-20">
+                      <div class="col-md-3 align-self-center g-mb-5 g-mb-0--md">
+                        <label class="mb-0">Category</label>
+                      </div>
+
+                      <div class="col-md-9 align-self-center">
+                        <div class="row g-mx-minus-10">
+                          <div class="col-md-auto align-self-center g-width-180--md g-px-10">
+                            <div class="form-group u-select--v2 g-pos-rel g-brd-gray-light-v7 g-rounded-4 mb-0">
+                              <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
+                              <i class="hs-admin-check g-absolute-centered g-font-size-default g-color-lightblue-v3"></i>
+                            </span>
+                              <select class="js-select u-select--v2-select w-100" name="category" required="required" style="display: none;">
+                                  <option>-- Category --</option>
+                                  <option value="Fish">Fish</option>
+                                  <option value="Food">Fish Food</option>
+                                  <option value="Tanks">Tanks</option>
+                                  <option value="Supplies">Supplies</option>
+                              </select>
+                              <i class="hs-admin-angle-down g-absolute-centered--y g-right-0 g-color-gray-light-v6 ml-auto g-mr-15"></i>
+                            </div>
+                          </div>
+
+                          <div class="col align-self-center g-hidden-md-down g-px-10">
+                            <span class="g-font-weight-400 g-color-black">Your current category is: <strong></strong></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row g-mb-20">
+                        <div class="col-md-3 align-self-center g-mb-5 g-mb-0--md">
+                          <label class="mb-0">Product Image</label>
+                        </div>
+  
+                        <div class="col-md-9 align-self-center">
+                          <div class="form-group g-pos-rel mb-0">
+                            <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
+                            <i class="hs-admin-check g-absolute-centered g-font-size-default g-color-lightblue-v3"></i>
+                          </span>
+                            <input class="form-control form-control-md g-brd-gray-light-v7 g-brd-lightblue-v3--focus g-brd-lightred-v2--error g-rounded-4 g-px-20 g-py-12" accept="image/*" type="file" name="image">
+                          </div>
+                        </div>
+                      </div>
+
+                    <div class="row g-mb-20">
+                      <div class="col-md-3 align-self-center g-mb-5 g-mb-0--md">
+                        <label class="mb-0" for="#productDescription">Product Description</label>
+                      </div>
+
+                      <div class="col-md-9 align-self-center">
+                        <div class="form-group g-pos-rel mb-0">
+                          <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
+                          <i class="hs-admin-check g-absolute-centered g-font-size-default g-color-lightblue-v3"></i>
+                        </span>
+                          <textarea id="productDescription" name="description" class="form-control form-control-md g-brd-gray-light-v7 g-brd-lightblue-v3--focus g-brd-lightred-v2--error g-rounded-4 g-px-20 g-py-12" required="required" data-msg="This field is mandatory"
+                          data-error-class="u-has-error-v3" data-success-class="has-success" aria-required="true"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row g-mb-20">
+                      <div class="col-md-3 align-self-center g-mb-5 g-mb-0--md">
+                        <label class="mb-0" for="#productWeight">Product Weight</label>
+                      </div>
+
+                      <div class="col-md-9 align-self-center">
+                        <div class="form-group g-pos-rel mb-0">
+                          <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
+                          <i class="hs-admin-check g-absolute-centered g-font-size-default g-color-lightblue-v3"></i>
+                        </span>
+                          <input id="productWeight" name="weight" class="form-control form-control-md g-brd-gray-light-v7 g-brd-lightblue-v3--focus g-brd-lightred-v2--error g-rounded-4 g-px-20 g-py-12" type="text"  required="required" data-msg="This field is mandatory"
+                          data-error-class="u-has-error-v3" data-success-class="has-success" aria-required="true">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row g-mb-20">
+                      <div class="col-md-3 align-self-center g-mb-5 g-mb-0--md">
+                        <label class="mb-0" for="#productLength">Product Length</label>
+                      </div>
+
+                      <div class="col-md-9 align-self-center">
+                        <div class="form-group g-pos-rel mb-0">
+                          <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
+                          <i class="hs-admin-check g-absolute-centered g-font-size-default g-color-lightblue-v3"></i>
+                        </span>
+                          <input id="productLength" name="length" class="form-control form-control-md g-brd-gray-light-v7 g-brd-lightblue-v3--focus g-brd-lightred-v2--error g-rounded-4 g-px-20 g-py-12" type="text"  required="required" data-msg="This field is mandatory"
+                          data-error-class="u-has-error-v3" data-success-class="has-success" aria-required="true">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row g-mb-20">
+                      <div class="col-md-3 align-self-center g-mb-5 g-mb-0--md">
+                        <label class="mb-0" for="#productWidth">Product Width</label>
+                      </div>
+
+                      <div class="col-md-9 align-self-center">
+                        <div class="form-group g-pos-rel mb-0">
+                          <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
+                          <i class="hs-admin-check g-absolute-centered g-font-size-default g-color-lightblue-v3"></i>
+                        </span>
+                          <input id="productWidth" name="width" class="form-control form-control-md g-brd-gray-light-v7 g-brd-lightblue-v3--focus g-brd-lightred-v2--error g-rounded-4 g-px-20 g-py-12" type="text"  required="required" data-msg="This field is mandatory"
+                          data-error-class="u-has-error-v3" data-success-class="has-success" aria-required="true">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row g-mb-20">
+                      <div class="col-md-3 align-self-center g-mb-5 g-mb-0--md">
+                        <label class="mb-0" for="#productHeight">Product Height</label>
+                      </div>
+
+                      <div class="col-md-9 align-self-center">
+                        <div class="form-group g-pos-rel mb-0">
+                          <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
+                          <i class="hs-admin-check g-absolute-centered g-font-size-default g-color-lightblue-v3"></i>
+                        </span>
+                          <input id="productHeight" name="height" class="form-control form-control-md g-brd-gray-light-v7 g-brd-lightblue-v3--focus g-brd-lightred-v2--error g-rounded-4 g-px-20 g-py-12" type="text"  required="required" data-msg="This field is mandatory"
+                          data-error-class="u-has-error-v3" data-success-class="has-success" aria-required="true">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row g-mb-20">
+                      <div class="col-md-3 align-self-center g-mb-5 g-mb-0--md">
+                        <label class="mb-0" for="#productWeight">Product Quantity</label>
+                      </div>
+
+                      <div class="col-md-9 align-self-center">
+                        <div class="form-group g-pos-rel mb-0">
+                          <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
+                          <i class="hs-admin-check g-absolute-centered g-font-size-default g-color-lightblue-v3"></i>
+                        </span>
+                          <input id="productWeight" name="qty" class="form-control form-control-md g-brd-gray-light-v7 g-brd-lightblue-v3--focus g-brd-lightred-v2--error g-rounded-4 g-px-20 g-py-12" type="text"  required="required" data-msg="This field is mandatory"
+                          data-error-class="u-has-error-v3" data-success-class="has-success" aria-required="true">
+                        </div>
+                      </div>
+                    </div>
+
+                    
+                  
+
+
+
+                    <hr class="d-flex g-brd-gray-light-v7 g-my-15 g-my-30--md">
+
+                    <div>
+                      <button class="btn btn-md btn-xl--md u-btn-lightblue-v3 g-width-160--md g-font-size-12 g-font-size-default--md g-mb-10" type="submit">Add Product</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <footer id="footer" class="u-footer--bottom-sticky g-bg-white g-color-gray-dark-v6 g-brd-top g-brd-gray-light-v7 g-pa-20">
+            <div class="row align-items-center">
+              <!-- Footer Nav -->
+
+              <!-- Footer Copyrights -->
+              <div class="col-md-4 text-center text-md-right">
+                <small class="d-block g-font-size-default">&copy; 2018 Tide Pool Aquatics, All Rights Reserved</small>
+              </div>
+              <!-- End Footer Copyrights -->
+            </div>
+          </footer>
+          <!-- End Footer -->
+        </div>
+      </div>
+    </section>
+    </main>
+
+
+
+</body>
+
+<% include ../partials/footerAdmin %>

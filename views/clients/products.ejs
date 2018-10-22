@@ -1,0 +1,116 @@
+<% include ../partials/header %>
+
+<div class="container">
+        <div class="row">
+          <!-- Content -->
+          <div class="col-md-12 order-md-2">
+            <div class="g-pl-15--lg">
+              <!-- Banner -->
+              <div class="g-bg-size-cover g-bg-pos-center g-mt-30 g-py-40" style="background-image: url(assets/img-temp/product-one.jpeg);">
+                <div class="g-pos-rel g-z-index-1 g-pa-50">
+                  <!-- <span class="d-block g-color-primary g-font-weight-700 g-font-size-40 mb-0">-40%</span> -->
+                  <h2 class="g-color-white g-font-size-50 mb-3">Shop Marine &amp; Aquaitcs</h2>
+                </div>
+              </div>
+              <!-- End Banner -->
+              <!-- Products -->
+              <div class="row g-pt-30 g-mb-50 table--products justify-content-md-center">
+              
+                <% products.forEach(function(product) { %>
+
+                <div class="col-6 col-lg-4 g-mb-30 table--products__item">
+                  <!-- Product -->
+                  <figure class="g-pos-rel g-mb-20">
+                    <img class="img-fluid" src="<%= product.image.url %>" alt="Image Description" style="width: 100%; height: 250px;">
+             
+                  </figure>
+
+                  <div class="media">
+                    <!-- Product Info -->
+                    <div class="d-flex flex-column">
+                      <h4 class="h6 g-color-black mb-1">
+                        <a class="u-link-v5 g-color-black g-color-primary--hover" href="#">
+                          <%= product.item %>
+                        </a>
+                      </h4>
+                      <span class="d-block g-color-black g-font-size-17">$<%= product.price %></span>
+                      <a class="d-inline-block g-color-gray-dark-v5 g-font-size-13" href="/products/<%= product._id %>">More Information</a>
+                    </div>
+                    <!-- End Product Info -->
+
+                    <!-- Products Icons -->
+                    <ul class="list-inline media-body text-right">
+                      <li class="list-inline-item align-middle mx-0">
+                          <a class="u-icon-v1 u-icon-size--sm g-color-gray-dark-v5 g-color-primary--hover g-font-size-15 rounded-circle" href="/add-to-cart/<%= product._id %>" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                          <i class="icon-finance-100 u-line-icon-pro"></i>
+                          
+                        </a>
+                      </li>
+                    </ul>
+                    <!-- End Products Icons -->
+                  </div>
+                  <!-- End Product -->
+                </div>
+
+                <% }) %>
+                  <!-- End Product -->
+              </div>
+              <!-- End Products -->
+
+              <hr class="g-mb-60">
+
+             
+            </div>
+          </div>
+          <!-- End Content -->
+
+        
+        </div>
+      </div>
+      <!-- End Products -->
+
+      <!-- Call to Action -->
+      <div class="g-bg-primary">
+        <div class="container g-py-20">
+          <div class="row justify-content-center">
+            <div class="col-md-4 mx-auto g-py-20">
+              <!-- Media -->
+              <div class="media g-px-50--lg">
+                <i class="d-flex g-color-white g-font-size-40 g-pos-rel g-top-3 mr-4 icon-real-estate-048 u-line-icon-pro"></i>
+                <div class="media-body">
+                  <span class="d-block g-color-white g-font-weight-500 g-font-size-17 text-uppercase">Next Day Delivery!</span>
+                  <span class="d-block g-color-white-opacity-0_8">1 Business Day</span>
+                </div>
+              </div>
+              <!-- End Media -->
+            </div>
+
+            <div class="col-md-4 mx-auto g-brd-x--md g-brd-white-opacity-0_3 g-py-20">
+              <!-- Media -->
+              <div class="media g-px-50--lg">
+                <i class="d-flex g-color-white g-font-size-40 g-pos-rel g-top-3 mr-4 icon-real-estate-040 u-line-icon-pro"></i>
+                <div class="media-body">
+                  <span class="d-block g-color-white g-font-weight-500 g-font-size-17 text-uppercase">Return Policy</span>
+                  <span class="d-block g-color-white-opacity-0_8">All Sales are Final</span>
+                </div>
+              </div>
+              <!-- End Media -->
+            </div>
+
+            <div class="col-md-4 mx-auto g-py-20">
+              <!-- Media -->
+              <div class="media g-px-50--lg">
+                <i class="d-flex g-color-white g-font-size-40 g-pos-rel g-top-3 mr-4 icon-hotel-restaurant-062 u-line-icon-pro"></i>
+                <div class="media-body text-left">
+                  <span class="d-block g-color-white g-font-weight-500 g-font-size-17 text-uppercase">Expedited Shipping</span>
+                  <span class="d-block g-color-white-opacity-0_8">Label FAQ's</span>
+                </div>
+              </div>
+              <!-- End Media -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Call to Action -->
+
+<% include ../partials/footer %>

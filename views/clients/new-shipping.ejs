@@ -1,0 +1,124 @@
+<% include ../partials/header %>
+
+<% if(products) { %>
+
+ <!-- Breadcrumbs -->
+ <section class="g-brd-bottom g-brd-gray-light-v4 g-py-30">
+        <div class="container">
+          <ul class="u-list-inline">
+            <li class="list-inline-item g-mr-5">
+              <a class="u-link-v5 g-color-text" href="#!">Shopping Cart</a>
+              <i class="g-color-gray-light-v2 g-ml-5 fa fa-angle-right"></i>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- End Breadcrumbs -->
+
+      <!-- Checkout Form -->
+      <div class="container g-pt-100 g-pb-70">
+           <!-- Enter form and Id here -->
+          <div class="g-mb-100">
+            <!-- Step Titles -->
+            <ul id="stepFormProgress" class="js-step-progress row justify-content-center list-inline text-center g-font-size-17 mb-0">
+              <li class="col-3 list-inline-item g-mb-20 g-mb-0--sm">
+                <span class="d-block u-icon-v2 u-icon-size--sm g-rounded-50x  mx-auto mb-3" id="p1">
+                  <i class="g-font-style-normal g-font-weight-700 g-hide-check">1</i>
+                  <i class="fa fa-check g-show-check"></i>
+                </span>
+                <h4 class="g-font-size-16 text-uppercase mb-0">Shopping Cart</h4>
+              </li>
+
+              <li class="col-3 list-inline-item g-mb-20 g-mb-0--sm">
+                <span class="d-block u-icon-v2 u-icon-size--sm g-rounded-50x mx-auto mb-3" id="p2">
+                  <i class="g-font-style-normal g-font-weight-700 g-hide-check">2</i>
+                  <i class="fa fa-check g-show-check"></i>
+                </span>
+                <h4 class="g-font-size-16 text-uppercase mb-0">Shipping</h4>
+              </li>
+
+              <li class="col-3 list-inline-item">
+                <span class="d-block u-icon-v2 u-icon-size--sm g-rounded-50x  mx-auto mb-3" id="p3">
+                  <i class="g-font-style-normal g-font-weight-700 g-hide-check">3</i>
+                  <i class="fa fa-check g-show-check"></i>
+                </span>
+                <h4 class="g-font-size-16 text-uppercase mb-0">Payment &amp; Review</h4>
+              </li>
+            </ul>
+            <!-- End Step Titles -->
+          </div>
+            <!-- Shopping Cart -->
+            <div id="step1" class="active tab">
+              <div class="row">
+                <div class="col-md-8 g-mb-30">
+                  <!-- Products Block -->
+                  <div class="g-overflow-x-scroll g-overflow-x-visible--lg">
+                    <table class="text-center w-100">
+                      <thead class="h6 g-brd-bottom g-brd-gray-light-v3 g-color-black text-uppercase">
+                        <tr>
+                          <th class="g-font-weight-400 text-left g-pb-20">Product Image</th>
+                          <th class="g-font-weight-400 g-width-100 g-pb-20">Product Price</th>
+                          <th class="g-font-weight-400 g-width-50 g-pb-20">Product Quantity</th>
+                          <th class="g-font-weight-400 g-width-65 g-pb-20">Remove Item</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <!-- Item-->
+                        <% products.forEach(function(product) { %>
+                        <tr class="g-brd-bottom g-brd-gray-light-v3">
+                          <td class="text-left g-py-25">
+                            <img class="d-inline-block g-width-100 mr-4" src="assets/img-temp/150x150/img6.jpg" alt="Image Description">
+                            <div class="d-inline-block align-middle">
+                              <h4 class="h6 g-color-black"><%= product.item.item %></h4>
+                              <ul class="list-unstyled g-color-gray-dark-v4 g-font-size-12 g-line-height-1_6 mb-0">
+                              </ul>
+                            </div>
+                          </td>
+                          <td class="g-color-gray-dark-v2 g-font-size-13">
+                                <h4 class="h6 g-color-black">$<%= product.price %></h4>
+                            </td>
+                          <td>
+                            <div class="g-color-gray-dark-v2 g-font-size-13">                              
+                                    <h4 class="h6 g-color-black"><%= product.qty %></h4>
+                            </div>
+                          </td>
+                          <td>
+                          <span class="g-color-gray-dark-v4 g-color-black--hover g-cursor-pointer">
+                                <i class="mt-auto fa fa-trash"></i>
+                              </span>
+                            </td>
+                        </tr>
+                        <input type="text" name="price" value="<%= product.price %>" hidden>
+                        <% }) %>
+                        <!-- End Item-->
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- End Products Block -->
+                </div>
+
+                <div class="col-md-4 g-mb-30">
+                  <!-- Summary -->
+                  
+                  <div class="g-bg-gray-light-v5 g-pa-20 g-pb-50 mb-4">
+                    <h4 class="h6 text-uppercase mb-3">Summary</h4>
+
+                    <div class="d-flex justify-content-between mb-2">
+                      <span class="g-color-black">Total Price</span>
+                      <span class="g-color-black g-font-weight-300">$<%= totalPrice %></span>
+                    </div>
+                  </div>
+                  <button class="btn btn-block u-btn-primary g-font-size-13 text-uppercase g-py-15 mb-4" type="button"><a class="text-white" href="/cart-checkout">Checkout</a></button>
+
+                </div>
+                </div>
+                </div>
+                  
+            </div>
+
+            <% } else { %>
+
+                <% }%>
+
+            <% include ../partials/footerCheckout %>

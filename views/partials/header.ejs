@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- includes the Braintree JS client SDK -->
+    <script src="https://js.braintreegateway.com/web/dropin/1.13.0/js/dropin.min.js"></script>
+
+  <!-- Title -->
+  <title>TidePool Aquatics</title>
+
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../../favicon.ico">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans%3A400%2C300%2C500%2C600%2C700%7CPlayfair+Display%7CRoboto%7CRaleway%7CSpectral%7CRubik">
+  <!-- CSS Global Compulsory -->
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  
+  <!-- CSS Global Icons -->
+  <link rel="stylesheet" href="../../assets/vendor/icon-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/icon-line/css/simple-line-icons.css">
+  <link rel="stylesheet" href="../../assets/vendor/icon-etlinefont/style.css">
+  <link rel="stylesheet" href="../../assets/vendor/icon-line-pro/style.css">
+  <link rel="stylesheet" href="../../assets/vendor/icon-hs/style.css">
+  <link rel="stylesheet" href="../../assets/vendor/dzsparallaxer/dzsparallaxer.css">
+  <link rel="stylesheet" href="../../assets/vendor/dzsparallaxer/dzsscroller/scroller.css">
+  <link rel="stylesheet" href="../../assets/vendor/dzsparallaxer/advancedscroller/plugin.css">
+  <link rel="stylesheet" href="../../assets/vendor/animate.css">
+  <link rel="stylesheet" href="../../assets/vendor/fancybox/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="../../assets/vendor/typedjs/typed.css">
+  <link rel="stylesheet" href="../../assets/vendor/hs-megamenu/src/hs.megamenu.css">
+  <link rel="stylesheet" href="../../assets/vendor/hamburgers/hamburgers.min.css">
+
+  <!-- CSS Unify -->
+  <link rel="stylesheet" href="../../assets/css/unify-core.css">
+  <link rel="stylesheet" href="../../assets/css/unify-components.css">
+  <link rel="stylesheet" href="../../assets/css/unify-globals.css">
+
+  <!-- CSS Customization -->
+  <link rel="stylesheet" href="../../assets/css/custom.css">
+</head>
+
+<body>
+<main>
+
+      <!-- Header -->
+      <header id="js-header" class="u-header u-header--static u-header--show-hide u-header--change-appearance" data-header-fix-moment="500" data-header-fix-effect="slide">
+          <div class="u-header__section u-header__section--light g-bg-white g-transition-0_3 g-py-10"> <!-- data-header-fix-moment-exclude="g-bg-white g-py-10" data-header-fix-moment-classes="g-bg-white-opacity-0_7 u-shadow-v18 g-py-0" -->
+            <nav class="navbar navbar-expand-lg">
+              <!-- Responsive Toggle Button -->
+              <button class="navbar-toggler navbar-toggler-right btn g-line-height-1 g-brd-none g-pa-0 g-pos-abs g-top-3 g-right-0" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navBar" data-toggle="collapse" data-target="#navBar">
+                <span class="hamburger hamburger--slider">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+                </span>
+                </span>
+              </button>
+              <!-- End Responsive Toggle Button -->
+    
+              <!-- -->
+              <a href="/home" class="navbar-brand">
+                <img src="../../assets/img/logo/logo-tidepool.png" class="logo--main" alt="TidePool Aquatics";>
+              </a>
+              <!-- End Logo -->
+    
+              <!-- Navigation -->
+              <div class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg" id="navBar">
+                <ul class="navbar-nav mr-auto text-uppercase g-font-weight-600 ml-auto list-unstyled">
+                  <li class="nav-item g-mx-20--lg">
+                    <a href="/home" class="nav-link px-0"><i class="fa fa-home" aria-hidden="true"></i></a>
+              </li>
+                  <li class="nav-item g-mx-20--lg">
+                    <a href="/about" class="nav-link px-0">About
+                  
+                </a>
+                  </li>
+                  <li class="nav-item g-mx-20--lg">
+                    <a href="/products" class="nav-link px-0">Products
+                </a>
+                  </li>
+                  <!--
+                  <li class="nav-item g-mx-20--lg">
+                    <a href="#" class="nav-link px-0">Policies
+                  
+                </a>
+              -->
+                  </li>
+                  <li class="nav-item g-mx-20--lg">
+                    <a href="/contact" class="nav-link px-0">Contact Us</a>
+                  </li>
+                  <% if(login) { %>
+                    <li class="nav-item g-mx-20--lg"></li>
+                      <a class="nav-link px-0" href="/user/profile">My Profile AND <% login.isAdmin %></a>
+                    </li>
+                    <% } else if(login && login.isAdmin) { %>
+                      <li class="nav-item g-mx-20--lg"></li>
+                      <a class="nav-link px-0" href="/admin">Welcome Admin!</a>
+                    </li>
+                    <% }  else { %>
+                    <li class="nav-item g-mx-20--lg">
+                        <a class="nav-link px-0" href="/user/register">Login | Sign Up</a>
+                    </li>
+                      <% } %>
+                <li class="nav-item g-mx-20--lg">
+                  <a href="/shopping-cart" class="nav-link px-0"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart
+                      <span class="badge badge-secondary"></span> <!-- session cart totalQty -->
+                      
+                  </a>
+                  </li>
+                  
+                </ul>
+              </div>
+              <!-- End Navigation -->
+            </nav>
+          </div>
+        </header>
+        <!-- End Header -->
+    
+    
+        <!-- Promo Block -->
+        <div class="g-bg-img-hero g-pos-rel" style="background-image: url(../../assets/img-temp/main-bg.jpeg);">
+          <div class="container g-pt-100">
+            <div class="row justify-content-lg-between">
+              <div class="col-lg-4 g-pt-50--lg">
+                <div class="mb-5">
+                  <h1 class="g-color-white g-font-size-45 mb-4">Welcome to Tide Pool Aquatics</h1>
+                  <p class="g-color-white">Explore and browse our online inventory.</p>
+                </div>
+    
+                <a class="js-go-to btn u-shadow-v33 g-hidden-md-down g-color-white g-bg-primary g-bg-main--hover g-rounded-30 g-px-35 g-py-10" href="/contact" data-target="#content">Contact Us</a>
+              </div>
+    
+              <div class="col-lg-8 align-self-end">
+                <div class="u-shadow-v40 g-brd-around g-brd-7 g-brd-white rounded">
+                  <img class="img-fluid rounded" src="../../../assets/img-temp/home-side.jpeg" alt="Image Description">
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- SVG Bottom Background Shape -->
+          <svg class="g-pos-abs g-bottom-0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1921 183.5" enable-background="new 0 0 1921 183.5" xml:space="preserve">
+            <path fill="#FFFFFF" d="M0,183.5v-142c0,0,507,171,1171,58c0,0,497-93,750,84H0z" />
+            <path opacity="0.2" fill="#FFFFFF" d="M0,183V0c0,0,507,220.4,1171,74.7c0,0,497-119.9,750,108.3H0z" />
+          </svg>
+          <!-- End SVG Bottom Background Shape -->
+        </div>
+        <!-- End Promo Block -->

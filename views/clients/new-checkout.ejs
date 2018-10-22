@@ -1,0 +1,213 @@
+<% include ../partials/header %>
+
+      <!-- Breadcrumbs -->
+      <section class="g-brd-bottom g-brd-gray-light-v4 g-py-30">
+        <div class="container">
+          <ul class="u-list-inline">
+            <li class="list-inline-item g-mr-5">
+              <a class="u-link-v5 g-color-text" href="/shopping-cart">Shopping Cart</a>
+              <i class="g-color-gray-light-v2 g-ml-5 fa fa-angle-right"></i>
+            </li>
+            <li class="list-inline-item g-mr-5">
+              <a class="u-link-v5 g-color-text" href="/new-checkout">Checkout</a>
+              <i class="g-color-gray-light-v2 g-ml-5 fa fa-angle-right"></i>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- End Breadcrumbs -->
+
+      <!-- Checkout Form -->
+      <div class="container g-pt-100 g-pb-70">
+
+                   <!-- Enter form and Id here -->
+                   <div class="g-mb-100">
+                      <!-- Step Titles -->
+                      <ul id="stepFormProgress" class="js-step-progress row justify-content-center list-inline text-center g-font-size-17 mb-0">
+                        <li class="col-3 list-inline-item g-mb-20 g-mb-0--sm">
+                          <span class="d-block u-icon-v2 u-icon-size--sm g-rounded-50x  mx-auto mb-3" id="p1" style="background-color: #AFEEEE; color: #fff">
+                            <i class="g-font-style-normal g-font-weight-700 g-hide-check">1</i>
+                            <i class="fa fa-check g-show-check"></i>
+                          </span>
+                          <h4 class="g-font-size-16 text-uppercase mb-0">Shopping Cart</h4>
+                        </li>
+          
+                        <li class="col-3 list-inline-item g-mb-20 g-mb-0--sm">
+                          <span class="d-block u-icon-v2 u-icon-size--sm g-rounded-50x mx-auto mb-3" id="p2" style="background-color: #AFEEEE; color: #fff">
+                            <i class="g-font-style-normal g-font-weight-700 g-hide-check">2</i>
+                            <i class="fa fa-check g-show-check"></i>
+                          </span>
+                          <h4 class="g-font-size-16 text-uppercase mb-0">Shipping</h4>
+                        </li>
+          
+                        <li class="col-3 list-inline-item">
+                          <span class="d-block u-icon-v2 u-icon-size--sm g-rounded-50x  mx-auto mb-3" id="p3">
+                            <i class="g-font-style-normal g-font-weight-700 g-hide-check">3</i>
+                            <i class="fa fa-check g-show-check"></i>
+                          </span>
+                          <h4 class="g-font-size-16 text-uppercase mb-0">Payment &amp; Review</h4>
+                        </li>
+                      </ul>
+                      <!-- End Step Titles -->
+                    </div>
+
+       <form method="post" action="/cart-checkout" class="checkout-form"> <!-- product id in action -->
+          <div id="stepFormSteps">
+
+
+            <!-- Shipping -->
+            <div id="step2" class="tab">
+              <div class="row">
+                <div class="col-md-12 g-mb-30">
+
+
+
+                  <div class="row">
+                    <div class="col-sm-6 g-mb-20">
+                      <div class="form-group">
+                        <label class="d-block g-color-gray-dark-v2 g-font-size-13"><i class="fa fa-user" aria-hidden="true"></i> First Name</label>
+                        <input id="inputGroup4" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15 nameFirstInput" name="nameFirst"
+                         type="text" placeholder="Blake" data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 g-mb-20">
+                      <div class="form-group">
+                        <label class="d-block g-color-gray-dark-v2 g-font-size-13"><i class="fa fa-user" aria-hidden="true"></i> Last Name</label>
+                        <input id="inputGroup5" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15 nameLast nameLastInput" name="nameLast" type="text" placeholder="Lewis" data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="row">
+                    <div class="col-sm-6 g-mb-20">
+                      <div class="form-group">
+                        <label class="d-block g-color-gray-dark-v2 g-font-size-13"><i class="fa fa-envelope-o" aria-hidden="true"></i> Email Address</label>
+                        <input id="inputGroup6" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15 emailInput" name="email" type="email" placeholder="somegmailemail@gmail.com" data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 g-mb-20">
+                      <div class="form-group">
+                        <label class="d-block g-color-gray-dark-v2 g-font-size-13"><i class="fa fa-envelope-o" aria-hidden="true"></i> Confirm Email</label>
+                        <input id="inputGroup7" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15" type="email" placeholder="Confirm Email">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="col-sm-6 g-mb-20">
+                        <div class="form-group">
+                          <label class="d-block g-color-gray-dark-v2 g-font-size-13"><i class="fa fa-location-arrow" aria-hidden="true"></i> Street Address</label>
+                          <input id="inputGroup8" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15 addressStreetInput" name="addressStreet" type="text" placeholder="1234 Maple Street" data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
+                        </div>
+                      </div>
+  
+                      <div class="col-sm-6 g-mb-20">
+                        <div class="form-group">
+                          <label class="d-block g-color-gray-dark-v2 g-font-size-13"><i class="fa fa-location-arrow" aria-hidden="true"></i> Suite / APT / Unit</label>
+                          <input id="inputGroup9" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15 addressSuiteInput" name="addressSuite" type="text" placeholder="Suite 12" data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
+                        </div>
+                      </div>
+                    </div>
+
+                  <div class="row">
+                    <div class="col-sm-6 g-mb-20">
+                      <div class="form-group">
+                        <label class="d-block g-color-gray-dark-v2 g-font-size-13"><i class="fa fa-location-arrow" aria-hidden="true"></i> State/Province</label>
+                        <input id="inputGroup8" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15 addressStateInput" name="addressState" type="text" placeholder="CA" data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 g-mb-20">
+                        <div class="form-group">
+                          <label class="d-block g-color-gray-dark-v2 g-font-size-13"><i class="fa fa-location-arrow" aria-hidden="true"></i> City</label>
+                          <input id="inputGroup8" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15 addressCityInput" name="addressCity" type="text" placeholder="Los Angeles" data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
+                        </div>
+                      </div>
+                  </div>
+
+                  
+                  <div class="row">
+                  
+                      <div class="col-sm-6 g-mb-20">
+                          <div class="form-group">
+                            <label class="d-block g-color-gray-dark-v2 g-font-size-13"><i class="fa fa-location-arrow" aria-hidden="true"></i> Zip Code</label>
+                            <input id="inputGroup9" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15 postalInput" name="postalCode" type="text" placeholder="12345" data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
+                          </div>
+                        </div>
+
+                    <div class="col-sm-6 g-mb-20">
+                      <div class="form-group">
+                        <label class="d-block g-color-gray-dark-v2 g-font-size-13"><i class="fa fa-phone" aria-hidden="true"></i> Phone Number</label>
+                        <input id="inputGroup10" class="form-control u-form-control g-placeholder-gray-light-v1 rounded-0 g-py-15 phoneInput" name="phone" type="text" placeholder="(xxx) xxx - xxxx" data-error-class="u-has-error-v1" data-success-class="u-has-success-v1">
+                      </div>
+                    </div>
+                  </div>
+                  <% products.forEach(function(dimension) { %>
+                    <input type="text" name="height" value="<%= dimension.item.height %>" hidden>
+                    <input type="text" name="length" value="<%= dimension.item.length %>" hidden>
+                    <input type="text" name="width" value="<%= dimension.item.width %>" hidden>
+                    <input type="text" name="weight" value="<%= dimension.item.weight %>" hidden>
+                  <% }) %>
+                    
+
+                <button class="btn u-btn-primary g-font-size-13 text-uppercase g-px-40 g-py-15 submitPayment btn--clientCode" type="submit">Confirm Total Cost</button>
+                </form>
+                </div>
+              </div>
+            </div>
+            </div>
+            <!-- End Shipping -->
+
+
+        
+        </div>
+      <!-- Call to Action -->
+      <div class="g-bg-primary">
+        <div class="container g-py-20">
+          <div class="row justify-content-center">
+            <div class="col-md-4 mx-auto g-py-20">
+              <!-- Media -->
+              <div class="media g-px-50--lg">
+                <i class="d-flex g-color-white g-font-size-40 g-pos-rel g-top-3 mr-4 icon-real-estate-048 u-line-icon-pro"></i>
+                <div class="media-body">
+                  <span class="d-block g-color-white g-font-weight-500 g-font-size-17 text-uppercase">Tide Pool Aquatics ships overnight on <strong>Wednesdays &amp; Fridays</strong></span>
+                  <span class="d-block g-color-white-opacity-0_8">In 1 Business Day</span>
+                </div>
+              </div>
+              <!-- End Media -->
+            </div>
+
+            <div class="col-md-4 mx-auto g-brd-x--md g-brd-white-opacity-0_3 g-py-20">
+              <!-- Media -->
+              <div class="media g-px-50--lg">
+                <i class="d-flex g-color-white g-font-size-40 g-pos-rel g-top-3 mr-4 icon-real-estate-040 u-line-icon-pro"></i>
+                <div class="media-body">
+                  <span class="d-block g-color-white g-font-weight-500 g-font-size-17 text-uppercase">All sales are Final</span>
+                  <span class="d-block g-color-white-opacity-0_8">No Returns</span>
+                </div>
+              </div>
+              <!-- End Media -->
+            </div>
+
+            <div class="col-md-4 mx-auto g-py-20">
+              <!-- Media -->
+              <div class="media g-px-50--lg">
+                <i class="d-flex g-color-white g-font-size-40 g-pos-rel g-top-3 mr-4 icon-hotel-restaurant-062 u-line-icon-pro"></i>
+                <div class="media-body text-left">
+                  <span class="d-block g-color-white g-font-weight-500 g-font-size-17 text-uppercase">100% Satisfaction Guarantee</span>
+                  <span class="d-block g-color-white-opacity-0_8">Contact Blake Lewis if Issues</span>
+                </div>
+              </div>
+              <!-- End Media -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Call to Action -->
+    </div>
+
+
+<% include ../partials/footerCheckout %>
